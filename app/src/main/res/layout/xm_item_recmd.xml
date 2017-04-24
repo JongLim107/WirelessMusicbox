@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:background="@color/grey_light_pro_alpha"
+        android:padding="@dimen/view_padding">
+
+        <TextView
+            android:id="@+id/recmCategoryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/xm_tag"
+            android:paddingLeft="@dimen/view_small_padding"
+            android:gravity="center"
+            android:text="猜你喜欢"/>
+
+        <TextView
+            android:id="@+id/recmCategoryMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_press_bluligalp_whi"
+            android:drawableRight="@mipmap/xm_enter"
+            android:paddingRight="@dimen/view_small_padding"
+            android:gravity="center"
+            android:text="更多"
+            android:textColor="@color/text_grey_light"/>
+    </RelativeLayout>
+
+    <com.shenqu.wirelessmbox.widget.NoScrollGridView
+        android:id="@+id/gvRecommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:numColumns="3"
+        android:orientation="horizontal"
+        android:stretchMode="columnWidth"/>
+
+</LinearLayout>

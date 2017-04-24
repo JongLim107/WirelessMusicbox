@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/side_padding"
+        android:text="内容简介"
+        android:textSize="@dimen/text_font_normal"/>
+
+    <TextView
+        android:id="@+id/tvAlbumIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/side_padding"
+        tools:text="内容"/>
+
+    <include layout="@layout/xm_listdivider_grey"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/side_padding"
+        android:text="主播简介"
+        android:textSize="@dimen/text_font_normal"/>
+
+    <TextView
+        android:id="@+id/tvAnnouncer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/side_padding"
+        tools:text="采采主持人，段子来了"/>
+
+
+    <include layout="@layout/xm_listdivider_grey"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/side_padding"
+        android:text="精彩推荐"
+        android:textSize="@dimen/text_font_normal"/>
+</LinearLayout>

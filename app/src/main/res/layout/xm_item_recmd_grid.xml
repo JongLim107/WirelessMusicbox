@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/grid_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_press_bluligalp_whi"
+    android:orientation="vertical"
+    android:padding="@dimen/side_padding">
+
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/grey_light_pro"
+        android:minHeight="96dp"
+        android:minWidth="96dp"
+        android:padding="@dimen/view_small_padding"
+        android:scaleType="fitXY"
+        tools:background="@mipmap/ic_album"/>
+
+    <TextView
+        android:id="@+id/tvIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_padding"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="专辑内容简介"
+        android:textSize="@dimen/text_font_small"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_padding"
+        android:drawableLeft="@mipmap/xm_album_def_small"
+        android:drawablePadding="@dimen/view_padding"
+        android:singleLine="true"
+        android:text="这是专辑名"
+        android:textColor="@color/text_grey_light"
+        android:textSize="@dimen/text_font_small_ex"/>
+
+</LinearLayout>

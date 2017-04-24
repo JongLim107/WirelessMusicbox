@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_alpha">#88FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_alpha">#88000000</color>
+    <color name="black_light_alpha">#98000000</color>
+
+    <color name="grey">#808080</color>
+    <color name="grey_alpha">#60808080</color>
+    <color name="grey_deep">#666666</color>
+    <color name="grey_deep_alpha">#80666666</color>
+    <color name="grey_deep_pro_alpha">#50666666</color>
+    <color name="grey_light">#C0C0C0</color>
+    <color name="grey_light_alpha">#60C0C0C0</color>
+    <color name="grey_light_pro">#E8E8E8</color>
+    <color name="grey_light_pro_alpha">#30E0E0E0</color>
+
+    <color name="blue">#345DA4</color>
+    <color name="blue_light">#80B9EF</color>
+    <color name="blue_light_alpha">#5580B9EF</color>
+    <color name="blue_deep">#262739</color>
+    <color name="blue_deep_alpha">#E0262739</color>
+
+    <color name="brown">#3EC3C8</color>
+    <color name="brown_alpha">#993EC3C8</color>
+    <color name="brown_light">#5ED3D8</color>
+    <color name="brown_light_alpha">#885ED3D8</color>
+
+    <color name="common_red">#FFFD712C</color>
+    <color name="common_red_alpha">#88F05F4C</color>
+
+    <color name="deep_green">#4CC38B</color>
+    <color name="deep_green_alpha">#AA4CC38B</color>
+    <color name="linedivider">@color/grey_light_pro</color>
+
+    <color name="app_style">#349add</color>
+    <color name="view">#F6F6F6</color>
+    <color name="item_bg">@color/white</color>
+    <color name="list_bg">@color/grey_alpha</color>
+    <color name="text_brown">@color/brown</color>
+    <color name="text_blue">@color/blue</color>
+    <color name="text_grey">@color/grey</color>
+    <color name="text_grey_light">@color/grey_light</color>
+    <color name="text_white">@color/white</color>
+    <color name="text_black">#101010</color>
+    <color name="tab_selected_bg">#C4E1E1</color>
+</resources>

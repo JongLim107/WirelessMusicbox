@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTheEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:minHeight="36dp"
+        android:padding="@dimen/view_padding"
+        android:text="THE END"/>
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:minHeight="36dp"
+        android:padding="@dimen/view_padding"
+        android:text="NETWORK ERROR, TRY AGAIN"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:progressBarStyleInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minHeight="36dp"
+        android:minWidth="36dp"
+        android:padding="@dimen/view_padding"/>
+
+</merge>

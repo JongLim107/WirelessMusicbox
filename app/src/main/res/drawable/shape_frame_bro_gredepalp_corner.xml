@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke
+        android:width="1dp"
+        android:color="@color/brown"/>
+    <!--边框颜色-->
+    <solid android:color="@color/grey_deep_pro_alpha"/>
+    <!--填充色-->
+    <corners android:radius="@dimen/view_padding"/>
+</shape>

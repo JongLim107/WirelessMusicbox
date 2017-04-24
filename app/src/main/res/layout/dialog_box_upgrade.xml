@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/side_padding"
+    android:orientation="vertical"
+    tools:context=".FileListActivity">
+
+    <LinearLayout
+        android:id="@+id/lyActionContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--dialog title-->
+        <TextView
+            android:id="@+id/lyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/side_padding"
+            android:layout_gravity="center"
+            android:text="选择固件进行升级："
+            android:textColor="@color/text_brown"
+            android:textSize="@dimen/text_font_large"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="注意：该功能可能会导致音响异常，请慎用！\n升级时请不要进行其他操作！保证网络顺畅！"
+            android:textColor="@color/common_red"/>
+
+        <TextView
+            android:id="@+id/tvCurPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/side_padding"
+            android:layout_marginRight="@dimen/side_padding"
+            android:text="/当前路径"/>
+
+        <!--dev's wifi list-->
+        <ListView
+            android:id="@+id/mListView"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginLeft="@dimen/side_padding"
+            android:layout_marginRight="@dimen/side_padding"
+            android:background="@drawable/shape_frame_grelig_tra_corner"
+            android:divider="@color/grey"
+            android:dividerHeight="1dp"
+            android:listSelector="@drawable/shape_bluligalp_tra"
+            tools:listitem="@layout/item_files"/>
+
+        <!--action button-->
+        <LinearLayout
+            android:id="@+id/lyBtnBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/side_padding"
+            android:divider="@drawable/spacer_medium"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height_small"
+                android:layout_weight="1"
+                android:background="@drawable/shape_enable_bluligalp_gre_press_tra"
+                android:onClick="onBtnBack"
+                android:text="返回"
+                android:textColor="@color/whi_check_bro_disgre"/>
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height_small"
+                android:layout_weight="1"
+                android:background="@drawable/shape_enable_bluligalp_gre_press_tra"
+                android:onClick="onBtnCancel"
+                android:text="取消"
+                android:textColor="@color/whi_check_bro_disgre"/>
+        </LinearLayout>
+
+        <!--auto restart-->
+        <CheckBox
+            android:id="@+id/cbRestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/side_padding"
+            android:button="@drawable/ic_point"
+            android:checked="true"
+            android:padding="@dimen/view_padding"
+            android:text="自动重启音乐盒"
+            android:textColor="@color/whi_check_bro_disgre"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

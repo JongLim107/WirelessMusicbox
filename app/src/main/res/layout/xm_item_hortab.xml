@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CheckedTextView
+    android:id="@+id/tvTitle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center"
+    android:paddingTop="@dimen/spacing_medium"
+    android:paddingLeft="@dimen/side_padding"
+    android:paddingRight="@dimen/side_padding"
+    android:text="资讯播报"
+    android:textColor="@color/gre_check_red"
+    android:textSize="@dimen/text_font_normal"/>

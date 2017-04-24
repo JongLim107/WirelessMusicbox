@@ -1,0 +1,61 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/app_style</item>
+        <item name="colorPrimaryDark">@color/app_style</item>
+        <item name="colorAccent">@color/common_red</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+    <!-- PopupWindow窗口动画 -->
+
+    <style name="MenuAnimationFade">
+        <item name="android:windowEnterAnimation">@anim/menu_fadein</item>
+        <item name="android:windowExitAnimation">@anim/menu_fadeout</item>
+    </style>
+
+    <style name="edittext_left">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/edittext_margin_left_icon</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:freezesText">true</item>
+        <item name="android:textColorHint">@color/text_grey_light</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/grey_deep_alpha</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="textview_marquee">
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+    </style>
+
+    <style name="xm_category_scroll_view_item_text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

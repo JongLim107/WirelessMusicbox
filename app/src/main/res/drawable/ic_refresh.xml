@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/ic_load" android:state_enabled="true"/>
+    <!-- 默认时的图片 -->
+    <!-- 选择时的图片 -->
+    <item android:drawable="@color/transparent" android:state_pressed="true"/>
+    <item android:drawable="@color/transparent" android:state_enabled="false"/>
+</selector>

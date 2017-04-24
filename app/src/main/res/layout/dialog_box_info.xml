@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/layoutContent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/side_padding"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context=".BoxInfoActivity">
+
+    <!--设备各种信息-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--设备基本信息-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="基本信息"
+            android:textColor="@color/text_brown"
+            android:textSize="@dimen/text_font_large"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/view_padding"
+            android:layout_marginTop="@dimen/view_padding"
+            android:background="@color/grey_light_alpha"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/deal_list_item_height"
+            android:layout_marginLeft="@dimen/side_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="名称："
+                android:textColor="@color/text_grey_light"/>
+
+            <EditText
+                android:id="@+id/devName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/view_small_padding"
+                android:layout_weight="2"
+                android:background="@drawable/shape_enable_gredepalp_tra"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:hint="音响 WiFi 名称"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/view_padding"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_font_small"/>
+
+            <Button
+                android:id="@+id/btnSetWifiName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/view_small_padding"
+                android:layout_weight="1"
+                android:background="@drawable/shape_enable_bluligalp_gre_press_tra"
+                android:clickable="false"
+                android:gravity="center"
+                android:padding="@dimen/view_padding"
+                android:text="修改"
+                android:textColor="@color/whi_check_bro_disgre"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyPwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/deal_list_item_height"
+            android:layout_marginLeft="@dimen/side_padding"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="密码："
+                android:textColor="@color/text_grey_light"/>
+
+            <EditText
+                android:id="@+id/devPwd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/view_small_padding"
+                android:layout_weight="2"
+                android:background="@drawable/shape_enable_gredepalp_tra"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:hint="密码必须长于8位"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword|textWebPassword"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/view_padding"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_font_small"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/view_small_padding"
+                android:layout_weight="0.5">
+
+                <ToggleButton
+                    android:id="@+id/tgShowPwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_showpwd"
+                    android:gravity="center"
+                    android:textOff=""
+                    android:textOn=""
+                    android:thumb="@null"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/deal_list_item_height"
+            android:layout_marginLeft="@dimen/side_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="版本："
+                android:textColor="@color/text_grey_light"/>
+
+            <TextView
+                android:id="@+id/devVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_white"
+                tools:text="V4.0.0.1-161102-1800-HIVI2-T012"/>
+
+        </LinearLayout>
+
+        <!--设备网络信息-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_padding"
+            android:text="网络状态"
+            android:textColor="@color/text_brown"
+            android:textSize="@dimen/text_font_large"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/view_padding"
+            android:background="@color/grey_light_alpha"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/deal_list_item_height"
+            android:layout_marginLeft="@dimen/side_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="状态："
+                android:textColor="@color/text_grey_light"/>
+
+            <TextView
+                android:id="@+id/wanState"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_white"
+                tools:text="成功连接路由器"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/deal_list_item_height"
+            android:layout_marginLeft="@dimen/side_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="地址："
+                android:textColor="@color/text_grey_light"/>
+
+            <TextView
+                android:id="@+id/wanIp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_white"
+                tools:text="192.168.100.101"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/deal_list_item_height"
+            android:layout_marginLeft="@dimen/side_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="网关："
+                android:textColor="@color/text_grey_light"/>
+
+            <TextView
+                android:id="@+id/wanGw"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_white"
+                tools:text="192.168.100.1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/deal_list_item_height"
+            android:layout_marginLeft="@dimen/side_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="子网："
+                android:textColor="@color/text_grey_light"/>
+
+            <TextView
+                android:id="@+id/wanMask"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_white"
+                tools:text="255.255.255.1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/deal_list_item_height"
+            android:layout_marginLeft="@dimen/side_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="域名："
+                android:textColor="@color/text_grey_light"/>
+
+            <TextView
+                android:id="@+id/wanDns"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_white"
+                tools:text="192.168.0.1"/>
+        </LinearLayout>
+
+        <!--设备U盘 sd卡信息-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_padding"
+            android:text="U盘设备（SD卡）"
+            android:textColor="@color/text_brown"
+            android:textSize="@dimen/text_font_large"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/view_padding"
+            android:background="@color/grey_light_alpha"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/deal_list_item_height"
+            android:layout_marginLeft="@dimen/side_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="状态："
+                android:textColor="@color/text_grey_light"/>
+
+            <TextView
+                android:id="@+id/usbState"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_white"
+                tools:text="没有插入"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/deal_list_item_height"
+            android:layout_marginLeft="@dimen/side_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="容量："
+                android:textColor="@color/text_grey_light"/>
+
+            <TextView
+                android:id="@+id/usbSize"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_white"
+                tools:text="1024 MB"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/deal_list_item_height"
+            android:layout_marginLeft="@dimen/side_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:text="已用："
+                android:textColor="@color/text_grey_light"/>
+
+            <TextView
+                android:id="@+id/usbUsed"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_white"
+                tools:text="512 MB"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

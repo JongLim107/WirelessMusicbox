@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/side_padding"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivCover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/side_padding"
+        android:layout_marginRight="@dimen/view_padding"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        tools:src="@mipmap/ic_music"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/ivEnter"
+        android:layout_toRightOf="@id/ivCover"
+        android:padding="@dimen/view_padding"
+        tools:background="@color/grey_light_pro_alpha">
+
+        <TextView
+            android:id="@+id/tvIntro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/view_padding"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="专辑内容简介"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/text_font_small"/>
+
+        <TextView
+            android:id="@+id/tvCacl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvIntro"
+            android:drawableLeft="@mipmap/xm_tag"
+            android:textColor="@color/text_grey_light"
+            android:textSize="@dimen/text_font_small_ex"/>
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvIntro"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_toRightOf="@id/tvCacl"
+            android:drawableLeft="@mipmap/ic_time"
+            android:text="13:14"
+            android:textColor="@color/text_grey_light"
+            android:textSize="@dimen/text_font_small_ex"/>
+
+        <TextView
+            android:id="@+id/tvUpdateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvIntro"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_toRightOf="@id/tvDuration"
+            android:text="3天前"
+            android:textColor="@color/text_grey_light"
+            android:textSize="@dimen/text_font_small_ex"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/side_padding"
+        android:src="@mipmap/xm_enter"/>
+
+</RelativeLayout>

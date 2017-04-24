@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layoutContent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/side_padding">
+
+        <LinearLayout
+            android:id="@+id/content1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/title_bar_side_margin"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/cover1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="64dp"
+                android:maxWidth="64dp"
+                tools:background="@mipmap/ic_music"/>
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:maxLines="1"
+                android:text="trackname"
+                android:textColor="@color/gre_press_cred_disgre"
+                android:textSize="@dimen/text_font_small"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/linedivider"
+            android:padding="@dimen/view_padding"/>
+
+        <LinearLayout
+            android:id="@+id/content2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/title_bar_side_margin"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/cover2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="64dp"
+                android:maxWidth="64dp"
+                tools:background="@mipmap/ic_music"/>
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:maxLines="1"
+                android:text="trackname"
+                android:textColor="@color/gre_press_cred_disgre"
+                android:textSize="@dimen/text_font_small"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

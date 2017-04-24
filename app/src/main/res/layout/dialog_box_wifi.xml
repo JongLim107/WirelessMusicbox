@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/side_padding"
+    android:orientation="vertical"
+    tools:context=".ConnWifiActivity">
+
+    <LinearLayout
+        android:id="@+id/lyActionContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--dialog title-->
+
+        <TextView
+            android:id="@+id/lyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/side_padding"
+            android:text="指定设备连接到WiFi："
+            android:textColor="@color/text_brown"
+            android:textSize="@dimen/text_font_large"/>
+
+        <!--dev's wifi list-->
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/wifiListView"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginLeft="@dimen/side_padding"
+            android:layout_marginRight="@dimen/side_padding"
+            android:background="@drawable/shape_frame_grelig_tra_corner"
+            android:divider="@color/grey"
+            android:dividerHeight="1dp"
+            android:listSelector="@drawable/shape_bluligalp_tra"
+            tools:listitem="@layout/item_wifiinfo"/>
+
+        <!--wifi ssid lines-->
+        <LinearLayout
+            android:id="@+id/lySsid"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_small"
+            android:layout_margin="@dimen/side_padding"
+            android:background="@drawable/frame_enable_whitra_grelig_press_grelig_corner">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:clickable="false"
+                android:gravity="center"
+                android:paddingLeft="@dimen/item_margin"
+                android:text="WiFi名称"
+                android:textColor="@color/grey_deep"/>
+
+            <EditText
+                android:id="@+id/configSsid"
+                style="@style/edittext_left"
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:imeActionId="@+id/configSsid"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                tools:text="wifi4mbox"
+                android:textColor="@color/text_white"/>
+        </LinearLayout>
+
+        <!--password line-->
+        <LinearLayout
+            android:id="@+id/lyPwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height_small"
+            android:layout_margin="@dimen/side_padding"
+            android:background="@drawable/frame_enable_whitra_grelig_press_grelig_corner">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:clickable="false"
+                android:gravity="center"
+                android:paddingLeft="@dimen/item_margin"
+                android:text="无线密码"
+                android:textColor="@color/grey_deep"/>
+
+            <EditText
+                android:id="@+id/configPwd"
+                style="@style/edittext_left"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:imeActionId="@+id/configPwd"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword|textWebPassword"
+                android:selectAllOnFocus="true"
+                android:text="shenqu@1688"
+                android:textColor="@color/text_white"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ToggleButton
+                    android:id="@+id/tgShowPwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_showpwd"
+                    android:textOff=""
+                    android:textOn=""/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--action button-->
+        <LinearLayout
+            android:id="@+id/lyBtnBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/side_padding"
+            android:divider="@drawable/spacer_medium"
+            android:orientation="horizontal"
+            android:showDividers="middle">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height_small"
+                android:layout_weight="1"
+                android:background="@drawable/shape_enable_bluligalp_gre_press_tra"
+                android:onClick="onBtnCancel"
+                android:text="取消"
+                android:textColor="@color/whi_check_bro_disgre"/>
+
+            <Button
+                android:id="@+id/btnSetAp"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height_small"
+                android:layout_weight="1"
+                android:background="@drawable/shape_enable_bluligalp_gre_press_tra"
+                android:onClick="onBtnSetConfig"
+                android:text="链接WiFi"
+                android:textColor="@color/whi_check_bro_disgre"/>
+        </LinearLayout>
+
+        <!--auto restart-->
+        <CheckBox
+            android:id="@+id/cbRestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/side_padding"
+            android:button="@drawable/ic_point"
+            android:checked="true"
+            android:padding="@dimen/view_padding"
+            android:text="自动重启音乐盒"
+            android:textColor="@color/whi_check_bro_disgre"
+            android:textSize="14sp"
+            android:textStyle="italic"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

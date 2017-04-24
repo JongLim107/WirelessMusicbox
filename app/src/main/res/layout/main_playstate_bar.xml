@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/controlBar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/grey_light_pro_alpha"
+    android:onClick="onOpenPlayer"
+    android:orientation="horizontal"
+    tools:showIn="@layout/main_content">
+
+    <LinearLayout
+        android:id="@+id/lyMiniSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/lyMiniCtrl"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvMusicTitle"
+            style="@style/textview_marquee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/view_padding"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/view_padding"
+            tools:text="我本人 - 吴雨霏"
+            android:textColor="@color/gre_press_bro_disgre"
+            android:textSize="@dimen/text_font_normal"/>
+
+        <SeekBar
+            android:id="@+id/playSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:maxHeight="3dp"
+            android:minHeight="2dp"
+            android:progressDrawable="@drawable/seek_bkg"
+            android:thumb="@color/brown_light_alpha"
+            tools:progress="50"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/view_padding">
+
+            <TextView
+                android:id="@+id/ctrlCurTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="00:00"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/text_font_small"/>
+
+            <TextView
+                android:id="@+id/ctrlTotalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="00:00"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/text_font_small"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyMiniCtrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/miniCtrlPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onPlay"
+            android:padding="@dimen/side_padding"
+            android:src="@drawable/ic_mini_play"/>
+
+        <ImageView
+            android:id="@+id/miniCtrlNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:onClick="onNext"
+            android:paddingRight="@dimen/side_padding"
+            android:src="@drawable/ic_mini_next"/>
+    </LinearLayout>
+
+</RelativeLayout>

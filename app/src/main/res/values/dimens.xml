@@ -1,0 +1,48 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">120dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <!-- 登陆界面的 dimension -->
+    <dimen name="login_margin_label_bottom">70dp</dimen>
+    <dimen name="login_margin_button_bottom">15dp</dimen>
+    <dimen name="login_margin_parent_bottom">30dp</dimen>
+
+    <!--所有的带图标显示的EditText的属性-->
+    <dimen name="edittext_margin_left_icon">10dp</dimen>
+
+    <!--所有的item间距和item圆角半径值-->
+    <dimen name="item_margin">3dp</dimen>
+    <dimen name="item_radius">3dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="edit_text_line_height">40dp</dimen>
+    <dimen name="text_lines_marginTop">12dp</dimen>
+    <dimen name="view_small_padding">2dp</dimen>
+    <dimen name="view_padding">6dp</dimen>
+    <dimen name="indicator_width_half">3dp</dimen>
+    <dimen name="side_padding">10dp</dimen>
+
+    <dimen name="spacing_medium">16dp</dimen>
+
+    <!-- activity_main fragment dimen -->
+    <dimen name="service_item_padding">10dp</dimen>
+
+    <dimen name="setting_text_margin_top">20dp</dimen>
+
+    <!-- test server dimen -->
+    <dimen name="user_head_w">60dp</dimen>
+    <dimen name="user_head_h">60dp</dimen>
+
+    <dimen name="item_img_w">64dp</dimen>
+    <dimen name="item_img_h">42dp</dimen>
+
+    <dimen name="tab_height">48dp</dimen>
+    <dimen name="title_bar_side_margin">36dp</dimen>
+
+</resources>

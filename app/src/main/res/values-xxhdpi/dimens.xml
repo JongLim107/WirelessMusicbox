@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--button height-->
+    <dimen name="button_height_large">56dp</dimen>
+    <dimen name="button_height_normal">46dp</dimen>
+    <dimen name="button_height_small">36dp</dimen>
+
+    <dimen name="text_font_large_ex">40sp</dimen>
+    <dimen name="text_font_large">20sp</dimen>
+    <dimen name="text_font_normal">16sp</dimen>
+    <dimen name="text_font_small">13sp</dimen>
+
+    <!-- activity_main fragment dimen -->
+    <dimen name="headbar_height">56dp</dimen>
+    <dimen name="wallet_space">140dp</dimen>
+    <dimen name="statue_bar">23dp</dimen>
+
+    <!--交易信息列表栏高度-->
+    <dimen name="list_item_height">44dp</dimen>
+    <dimen name="deal_list_item_height">32dp</dimen>
+
+</resources>

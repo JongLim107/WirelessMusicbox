@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ogaclejapan.smarttablayout.SmartTabLayout
+    android:id="@+id/smartTabLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/tab_height"
+    android:background="@color/grey_light_pro_alpha"
+    app:stl_defaultTabTextColor="@color/gre_check_red"
+    app:stl_defaultTabTextHorizontalPadding="@dimen/side_padding"
+    app:stl_defaultTabTextSize="@dimen/text_font_normal"
+    app:stl_indicatorColor="@color/common_red"
+    app:stl_indicatorInterpolation="linear"
+    app:stl_indicatorThickness="2dp"
+    app:stl_titleOffset="auto_center"
+    app:stl_underlineThickness="0dp"/>

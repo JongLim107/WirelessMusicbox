@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/content_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.shenqu.wirelessmbox.MainActivity"
+    tools:showIn="@layout/main_app_bar">
+
+    <!--本地音乐栏-->
+    <RelativeLayout
+        android:id="@+id/lyLocal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:clickable="true"
+        android:background="@mipmap/bg_localsong">
+
+        <LinearLayout
+            android:id="@+id/lyLocalMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/button_height_small"
+            android:orientation="vertical"
+            android:onClick="onOpenList">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/side_padding"
+                android:text="本地音乐"
+                android:textColor="@color/whi_press_bro_alp"
+                android:textSize="@dimen/text_font_normal"/>
+
+            <TextView
+                android:id="@+id/tvLocalFounded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="共发现...首歌"
+                android:textColor="@color/whi_press_bro_alp"
+                android:textSize="@dimen/text_font_small"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivPostLocalList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/button_height_small"
+            android:background="@drawable/ic_play"
+            android:onClick="onPostList"/>
+    </RelativeLayout>
+
+    <!--网络音乐-->
+
+    <LinearLayout
+        android:id="@+id/lyNetList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lyLocal"
+        android:background="@color/grey_light_pro_alpha"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/tvFavoriteSongs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawablePadding="@dimen/view_padding"
+            android:drawableTop="@drawable/ic_main_favorite"
+            android:gravity="center"
+            android:onClick="onOpenFavorite"
+            android:text="我的最爱"
+            android:textColor="@color/blu_press_gre_dis_gre"/>
+
+        <TextView
+            android:id="@+id/tvNetSongs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawablePadding="@dimen/view_padding"
+            android:drawableTop="@drawable/ic_main_netsong"
+            android:gravity="center"
+            android:text="网络音乐"
+            android:textColor="@color/blu_press_gre_dis_gre"/>
+
+        <TextView
+            android:id="@+id/tvNetRadio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawablePadding="@dimen/view_padding"
+            android:drawableTop="@drawable/ic_main_netradio"
+            android:gravity="center"
+            android:onClick="onOpenRadio"
+            android:text="网络电台"
+            android:textColor="@color/blu_press_gre_dis_gre"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyActionList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/lyNetList"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/tvCreate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_main_create"
+            android:drawablePadding="@dimen/view_padding"
+            android:gravity="center_vertical"
+            android:onClick="onCreateList"
+            android:padding="@dimen/side_padding"
+            android:text="创建列表"
+            android:textColor="@color/blu_press_gre_dis_gre"/>
+
+        <ImageView
+            android:id="@+id/tvRecent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawablePadding="@dimen/view_padding"
+            android:gravity="center_vertical"
+            android:padding="@dimen/side_padding"
+            android:src="@drawable/ic_main_recent"
+            android:textColor="@color/blu_press_gre_dis_gre"/>
+
+    </LinearLayout>
+
+    <com.shenqu.wirelessmbox.swipemenulistview.SwipeMenuListView
+        android:id="@+id/lvPlaylists"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lyActionList"
+        android:layout_above="@+id/controlBar"/>
+
+    <include android:id="@+id/controlBar" layout="@layout/main_playstate_bar"/>
+
+</RelativeLayout>

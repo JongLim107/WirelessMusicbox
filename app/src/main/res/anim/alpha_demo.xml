@@ -1,0 +1,12 @@
+<alpha
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="2000"
+    android:fromAlpha="1.0"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:toAlpha="0.1"/>
+    <!--
+    fromAlpha :起始透明度
+    toAlpha:结束透明度
+    1.0表示完全不透明
+    0.0表示完全透明
+     -->

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/lyPlayActList"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvListTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/side_padding"
+        android:text="本地歌曲列表："
+        android:textColor="@color/brown_light"
+        android:textSize="@dimen/text_font_normal"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/brown_light"/>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/tracksView"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:cacheColorHint="@color/grey_deep"
+        android:divider="@color/linedivider"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@drawable/shape_bluligalp_tra"
+        android:smoothScrollbar="true"
+        tools:listitem="@layout/item_musicinfo"/>
+
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="音响设置">
+        <menu android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_info"
+                android:icon="@mipmap/nav_info"
+                android:title="音响基本信息"/>
+            <item
+                android:id="@+id/nav_connwifi"
+                android:icon="@mipmap/nav_connwifi"
+                android:title="音响连接WIFI"/>
+            <item
+                android:id="@+id/nav_connap"
+                android:icon="@mipmap/nav_connap"
+                android:title="设置手机热点"/>
+            <item
+                android:id="@+id/nav_restart"
+                android:icon="@mipmap/nav_restart"
+                android:title="重启远程音响"/>
+            <item
+                android:id="@+id/nav_reset"
+                android:icon="@mipmap/nav_reset"
+                android:title="恢复出厂设置"/>
+            <item
+                android:id="@+id/nav_upgrade"
+                android:icon="@mipmap/nav_upgrade"
+                android:title="音响固件升级"
+                />
+        </menu>
+    </item>
+
+    <item android:title="App 设置">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="分享给朋友"/>
+            <item
+                android:id="@+id/nav_update"
+                android:icon="@mipmap/ic_download"
+                android:title="检查更新"/>
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@mipmap/nav_exit"
+                android:title="退出程序"/>
+        </menu>
+    </item>
+
+</menu>

@@ -134,7 +134,7 @@ public class ScanActivity extends BaseActivity implements Callback, AdapterView.
         super.onCreate(savedInstanceState);
         setContentLayout(R.layout.activity_scan);
 
-        mWifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        mWifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         mHandler = new Handler(this);
 
         initBaseView();

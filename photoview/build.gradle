@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion MINSdkVersion as int
+        targetSdkVersion TARGETSdkVersion as int
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    compile "com.android.support:support-core-utils:25.3.1"
+}
+
+apply from: 'https://raw.githubusercontent.com/Commit451/gradle-android-javadocs/1.0.0/gradle-android-javadocs.gradle'

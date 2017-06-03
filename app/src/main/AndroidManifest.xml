@@ -98,6 +98,7 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity android:name=".tools.AnimationTest"/>
+        <activity android:name=".ximalaya.childactivity.PhotoViewerActivity"/>
 
         <service android:name=".action.BoxService"/>
 

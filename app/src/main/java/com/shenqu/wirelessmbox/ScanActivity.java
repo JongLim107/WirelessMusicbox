@@ -124,7 +124,7 @@ public class ScanActivity extends BaseActivity implements Callback, AdapterView.
         mProgressDialog = new MyProgressDialog(this);
         mProgressDialog.initDialog(false, "正在搜索设备，请稍候...");
         mProgressDialog.show();
-        mHandler.postDelayed(mRunnableCancelDialog, 8000);
+        mHandler.postDelayed(mRunnableCancelDialog, 2000);
         mBroadcast = new ThreadBroadcast(this, ActionType.SCAN_PORT, SCAN_CMD, 8, mHandler);
         mBroadcast.start();
     }
@@ -230,8 +230,23 @@ public class ScanActivity extends BaseActivity implements Callback, AdapterView.
         if (Build.VERSION.SDK_INT > 14) {
             //Intent intent = new Intent(Settings.ACTION_SETTINGS);//系统设置界面
             //Intent intent = new Intent(this, PlayerActivity.class);//测试需要跳转
-            Intent intent = new Intent(this, MainFragmentActivity.class);//测试需要跳转
-            startActivity(intent);
+            //Intent intent = new Intent(this, MainFragmentActivity.class);//测试需要跳转
+            try {
+                JSONObject body = new JSONObject();
+                body.put("DeviceIpAddr", WirelessUtils.getWifiApIpAddress());
+                body.put("DeviceFiremwareVersion", "HIFI-V420-1987");
+                body.put("HttpApiPort", "1987");
+                body.put("DeviceName", "HiFi107");
+                body.put("DeviceMacAddr", "AB-SA-24-25-23-45");
+
+                JSONObject j = new JSONObject();
+                j.put("Body", body);
+                MyApplication.setMusicBox(new MusicBox(j.toString()));
+                Intent intent = new Intent(this, MainActivity.class);//测试需要跳转
+                startActivity(intent);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
     }
 

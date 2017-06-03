@@ -1,15 +1,21 @@
 package com.shenqu.wirelessmbox.ximalaya.childactivity;
 
-import android.graphics.Color;
+import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.shenqu.wirelessmbox.R;
@@ -29,9 +35,9 @@ import org.xutils.x;
 /**
  * Created by JongLim on 2016/12/13.
  * Activity for recommend fragment.
- * */
+ */
 
-public class AlbumFragmentActivity extends BaseFragmentActivity {
+public class AlbumFragmentActivity extends BaseFragmentActivity implements View.OnClickListener {
     private static final String TAG = "AlbumActi";
 
     private ImageView ivCover;
@@ -52,6 +58,8 @@ public class AlbumFragmentActivity extends BaseFragmentActivity {
     private Fragment[] mFragments = new Fragment[mTitles.length];
 
     public Album mAlbum;
+
+    PopupWindow popupWindow;
 
     private void initBaseView() {
         setTitle("专辑详情");
@@ -115,6 +123,7 @@ public class AlbumFragmentActivity extends BaseFragmentActivity {
     }
 
     private void initEvents() {
+        ivCover.setOnClickListener(this);
         mViewPager.setOnPageChangeListener(new OnPageChangeListener() {
             @Override
             public void onPageSelected(int position) {
@@ -175,5 +184,60 @@ public class AlbumFragmentActivity extends BaseFragmentActivity {
     protected void onDestroy() {
         super.onDestroy();
         JLLog.LOGI(TAG, "onDestroy()");
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.ivCover:
+                showPopup(v, mAlbum.getCoverUrlLarge());
+                //startPictureActivity(mAlbum.getCoverUrlMiddle(), v);
+                break;
+            default:
+                popupWindow.dismiss();
+                break;
+        }
+    }
+
+
+    private void startPictureActivity(String url, View transitView) {
+        Intent intent = new Intent(getBaseContext(), PhotoViewerActivity.class);
+        intent.putExtra("url_img", url);
+
+        ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(AlbumFragmentActivity.this, transitView,
+                                                                                                 PhotoViewerActivity.TRANSIT_PIC);
+        try {
+            ActivityCompat.startActivity(AlbumFragmentActivity.this, intent, optionsCompat.toBundle());
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+            startActivity(intent);
+        }
+    }
+
+
+    private void showPopup(final View anchorView, final String str) {
+
+        View rootView = getLayoutInflater().inflate(R.layout.popup_layout, null);
+
+        // Initialize widgets from `popup_layout.xml`
+        ViewPagerFixed viewPager = (ViewPagerFixed) rootView.findViewById(R.id.viewPager);
+        viewPager.setAdapter(new CustomPagerAdapter(getBaseContext(), mAlbum.getCoverUrlMiddle()));
+
+        popupWindow = new PopupWindow(rootView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+
+        // If the PopupWindow should be focusable
+        popupWindow.setFocusable(true);
+
+        // If you need the PopupWindow to dismiss when when touched outside
+        popupWindow.setBackgroundDrawable(new ColorDrawable());
+
+        int location[] = new int[2];
+
+        // Get the View's(the one that was clicked in the Fragment) location
+        anchorView.getLocationOnScreen(location);
+
+        // Using location, the PopupWindow will be displayed right under anchorView
+        popupWindow.showAtLocation(anchorView, Gravity.NO_GRAVITY, location[0], location[1] + anchorView.getHeight());
+
     }
 }

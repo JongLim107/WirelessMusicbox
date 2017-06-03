@@ -24,9 +24,10 @@ dependencies {
     compile project(path: ':pulltorefresh')
     compile project(path: ':smarttab')
     compile project(path: ':irecyclerview')
-    compile 'com.android.support:appcompat-v7:23+'
-    compile 'com.android.support:recyclerview-v7:23+'
-    compile 'com.android.support:support-v4:23+'
-    compile 'com.android.support:design:23+'
+    compile project(path: ':photoview')
+    compile 'com.android.support:appcompat-v7:25+'
+    compile 'com.android.support:recyclerview-v7:25+'
+    compile 'com.android.support:support-v4:25+'
+    compile 'com.android.support:design:25+'
     compile 'com.zhy:base-adapter:2.0.0'
 }

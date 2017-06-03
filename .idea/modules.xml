@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/WirelessMbox.iml" filepath="$PROJECT_DIR$/WirelessMbox.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/irecyclerview/irecyclerview.iml" filepath="$PROJECT_DIR$/irecyclerview/irecyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/photoview/photoview.iml" filepath="$PROJECT_DIR$/photoview/photoview.iml" />
       <module fileurl="file://$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" filepath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" />
       <module fileurl="file://$PROJECT_DIR$/smarttab/smarttab.iml" filepath="$PROJECT_DIR$/smarttab/smarttab.iml" />
     </modules>

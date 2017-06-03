@@ -9,7 +9,7 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.shenqu.wirelessmbox.MainActivity"
-    tools:showIn="@layout/main_app_bar">
+    tools:showIn="@layout/main_layout">
 
     <!--本地音乐栏-->
     <RelativeLayout

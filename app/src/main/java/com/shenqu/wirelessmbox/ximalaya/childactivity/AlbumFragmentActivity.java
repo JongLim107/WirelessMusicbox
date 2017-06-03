@@ -199,7 +199,6 @@ public class AlbumFragmentActivity extends BaseFragmentActivity implements View.
         }
     }
 
-
     private void startPictureActivity(String url, View transitView) {
         Intent intent = new Intent(getBaseContext(), PhotoViewerActivity.class);
         intent.putExtra("url_img", url);
@@ -213,7 +212,6 @@ public class AlbumFragmentActivity extends BaseFragmentActivity implements View.
             startActivity(intent);
         }
     }
-
 
     private void showPopup(final View anchorView, final String str) {
 

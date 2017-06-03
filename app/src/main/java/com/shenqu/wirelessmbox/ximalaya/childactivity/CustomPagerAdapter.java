@@ -20,12 +20,10 @@ import java.util.ArrayList;
 public class CustomPagerAdapter extends PagerAdapter{
 
     final ArrayList<String> imgs = new ArrayList<>();
-    private final LayoutInflater mLayoutInflater;
     Context mContext;
 
     CustomPagerAdapter(Context context, String url) {
         mContext = context;
-        mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         imgs.add(url);
         imgs.add("http://img1.gtimg.com/ent/pics/hv1/151/152/2012/130869211.jpg");
         imgs.add("https://pbs.twimg.com/media/CRliL4yUcAAyob8.png");
@@ -34,18 +32,17 @@ public class CustomPagerAdapter extends PagerAdapter{
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        View itemView = mLayoutInflater.inflate(R.layout.item_adapter, container, false);
-        
-        PhotoView photoView = (PhotoView) itemView.findViewById(R.id.photoView);
-        x.image().bind(photoView, imgs.get(position));
+        PhotoView photoView = new PhotoView(mContext);
+        container.addView(photoView);
+
         photoView.setMinimumScale(0.5f);
-        container.addView(itemView);
-        return itemView;
+        x.image().bind(photoView, imgs.get(position));
+        return photoView;
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object view) {
-        container.removeView((View) view);
+        container.removeView((PhotoView) view);
     }
 
     @Override

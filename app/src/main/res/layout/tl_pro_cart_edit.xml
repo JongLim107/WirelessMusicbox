@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".testNlearning.ProductCartActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/app_style"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="My Cart"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:onClick="onCHangeStyle"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Edit"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <CheckedTextView
+        android:id="@+id/proSelectAll"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@+id/rlTitle"
+        android:drawableLeft="@drawable/ic_menu_share"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="Select all"/>
+
+    <View
+        android:id="@+id/spaceGap"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/proSelectAll"
+        android:background="@color/black_alpha"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llProRFQ"
+        android:layout_below="@+id/spaceGap"/>
+
+    <RelativeLayout
+        android:id="@+id/llProRFQ"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_style">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Select items: 2"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="Total Price: "
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/proCreateEFQ"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_margin="6dp"
+            android:background="@color/common_red"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Create EFQ"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+</RelativeLayout>

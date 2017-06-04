@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <CheckBox
+            android:id="@+id/proCbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/proPicture"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/itemCbox"
+            android:background="@mipmap/ic_music"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/proPicture">
+
+            <TextView
+                android:id="@+id/proTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical|left"
+                android:singleLine="true"
+                android:text="trackname this is the title test long with ellipsize"
+                android:textColor="#555"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/proBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proTitle"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/status"
+                android:text="brand/coo: china"
+                android:textColor="#0f0f0f"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/proPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Negotiable or $18.60"
+                android:textColor="#088"
+                android:textSize="13sp"
+                android:layout_below="@+id/proBrand"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <CheckedTextView
+                android:id="@+id/proRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proPrice"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@+id/status"
+                android:checked="true"
+                android:drawableLeft="@drawable/ic_showpwd"
+                android:gravity="center_vertical"
+                android:text="Negotiable or $18.60"
+                android:textColor="#888"
+                android:textSize="13sp"
+                tools:visibility="visible"/>
+
+            <LinearLayout
+                android:id="@+id/llProQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/proMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/app_style"
+                    android:gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"/>
+
+                <EditText
+                    android:id="@+id/proQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/frame_enable_whitra_grelig_press_grelig_corner"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="50"/>
+
+                <TextView
+                    android:id="@+id/proPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/app_style"
+                    android:gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="+"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black_alpha"/>
+
+</LinearLayout>

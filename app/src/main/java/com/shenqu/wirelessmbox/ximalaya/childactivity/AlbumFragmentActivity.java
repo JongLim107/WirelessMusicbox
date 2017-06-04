@@ -190,8 +190,8 @@ public class AlbumFragmentActivity extends BaseFragmentActivity implements View.
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.ivCover:
-                showPopup(v, mAlbum.getCoverUrlLarge());
-                //startPictureActivity(mAlbum.getCoverUrlMiddle(), v);
+                //showPopup(v, mAlbum.getCoverUrlLarge());
+                startPictureActivity(mAlbum.getCoverUrlMiddle(), v);
                 break;
             default:
                 popupWindow.dismiss();
@@ -199,11 +199,11 @@ public class AlbumFragmentActivity extends BaseFragmentActivity implements View.
         }
     }
 
-    private void startPictureActivity(String url, View transitView) {
+    private void startPictureActivity(String url, View anchorView) {
         Intent intent = new Intent(getBaseContext(), PhotoViewerActivity.class);
         intent.putExtra("url_img", url);
 
-        ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(AlbumFragmentActivity.this, transitView,
+        ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(AlbumFragmentActivity.this, anchorView,
                                                                                                  PhotoViewerActivity.TRANSIT_PIC);
         try {
             ActivityCompat.startActivity(AlbumFragmentActivity.this, intent, optionsCompat.toBundle());
@@ -215,11 +215,12 @@ public class AlbumFragmentActivity extends BaseFragmentActivity implements View.
 
     private void showPopup(final View anchorView, final String str) {
 
-        View rootView = getLayoutInflater().inflate(R.layout.popup_layout, null);
+        View rootView = getLayoutInflater().inflate(R.layout.photos_viewer, null);
+        rootView.findViewById(R.id.btnClose).setOnClickListener(this);
 
-        // Initialize widgets from `popup_layout.xml`
+        // Initialize widgets from `photos_viewerr.xml`
         ViewPagerFixed viewPager = (ViewPagerFixed) rootView.findViewById(R.id.viewPager);
-        viewPager.setAdapter(new CustomPagerAdapter(getBaseContext(), mAlbum.getCoverUrlMiddle()));
+        viewPager.setAdapter(new PhotoPagerAdapter(getBaseContext(), str));
 
         popupWindow = new PopupWindow(rootView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
 

@@ -88,6 +88,7 @@
             android:drawablePadding="@dimen/view_padding"
             android:drawableTop="@drawable/ic_main_netsong"
             android:gravity="center"
+            android:onClick="onOpenNetSong"
             android:text="网络音乐"
             android:textColor="@color/blu_press_gre_dis_gre"/>
 

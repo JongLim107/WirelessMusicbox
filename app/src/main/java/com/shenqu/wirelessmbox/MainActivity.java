@@ -48,6 +48,7 @@ import com.shenqu.wirelessmbox.swipemenulistview.SwipeMenu;
 import com.shenqu.wirelessmbox.swipemenulistview.SwipeMenuCreator;
 import com.shenqu.wirelessmbox.swipemenulistview.SwipeMenuItem;
 import com.shenqu.wirelessmbox.swipemenulistview.SwipeMenuListView;
+import com.shenqu.wirelessmbox.testNlearning.ProductCartActivity;
 import com.shenqu.wirelessmbox.tools.FileUtils;
 import com.shenqu.wirelessmbox.tools.JLJSON;
 import com.shenqu.wirelessmbox.tools.JLLog;
@@ -293,7 +294,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
     protected void onResume() {
         mBoxControler.setHandler(mHandler);
         mBoxControler.setStateListener(this);
-        mBoxControler.setSyncing(true);
+        mBoxControler.setSyncing(/*true*/false);
         super.onResume();
     }
 
@@ -571,6 +572,12 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         mTracks = mFavoriteTracks;
         initTrackList(mFavoriteTracks, 0);
         changeListWindowState();
+    }
+
+    public void onOpenNetSong(View view) {
+        mBoxControler.setSyncing(false);
+        Intent intent = new Intent(mContext, ProductCartActivity.class);
+        startActivity(intent);
     }
 
     public void onOpenRadio(View view) {
